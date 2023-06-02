@@ -6,7 +6,6 @@ const logger = require('morgan')
 const indexRouter = require('./routes/index.routes')
 const usersRouter = require('./routes/users.routes')
 const carRouter = require('./routes/car.routes')
-const cartRouter = require('./routes/cart.routes')
 
 const cors = require('cors')
 
@@ -22,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/car', carRouter)
-app.use('/cart', cartRouter)
 
 
 
