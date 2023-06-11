@@ -5,11 +5,10 @@ const carSchema = new mongoose.Schema(
     name: { type: String, required: true },
     model: {  type: String, required: true },
     priceRent: {  type: Number, required: true },
-    priceSell: {  type: Number, required: true },
-    available: { type: Boolean, index: true},
+    available: { type: Boolean},
     description: { type: String},
     images: { type: String },
-    seats: {  types: Number},
+    seats: {  type: Number},
   },
   {
     timestamps: true,

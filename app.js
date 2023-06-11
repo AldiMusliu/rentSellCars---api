@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/car', carRouter)
-
+app.use('/images', express.static('public/images'))
 
 
 module.exports = app

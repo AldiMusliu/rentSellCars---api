@@ -18,15 +18,8 @@ module.exports = {
     return result
   },
   editById: async (id, data) => {
-    const result = await carModel.findByIdAndUpdate(id, data)
-    return result
-  },
-  changeImage: async (id, fileName) => {
-    const result = await carModel.findByIdAndUpdate(id, { images: fileName })
-    return result
-  },
-  deleteImage: async (id, fileName) => {
-    const result = await carModel.findByIdAndDelete(id, { images: fileName })
-    return result
+    console.log(data); // add this line
+    const result = await carModel.findByIdAndUpdate(id, data, {new: true});
+    return result;
   },
 }
